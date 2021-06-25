@@ -15,7 +15,7 @@
   "scripts": {
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "start": "packx start"
+    "start": "packx start -p 3000"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
