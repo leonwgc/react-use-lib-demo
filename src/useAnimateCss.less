@@ -1,0 +1,116 @@
+.animate {
+  .bird {
+    position: absolute;
+    background: no-repeat url(./images/player.png);
+    background-size: 100% 100%;
+    width: 143px;
+    height: 132px;
+  }
+  .bird4 {
+    position: absolute;
+    top: 100px;
+    background: no-repeat url(./images/player.png);
+    background-size: 100% 100%;
+    width: 143px;
+    height: 132px;
+  }
+  .bird5 {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background: no-repeat url(./images/player.png);
+    background-size: 100% 100%;
+    width: 143px;
+    height: 132px;
+  }
+  @keyframes r1 {
+    from {
+      opacity: 0;
+      bottom: -100%;
+      left: -100%;
+    }
+
+    to {
+      bottom: 200px;
+      left: 50px;
+    }
+  }
+  .bird1 {
+    position: absolute;
+    background: no-repeat url(./images/player.png);
+    background-size: 100% 100%;
+    width: 143px;
+    height: 132px;
+    animation: r1 3s linear forwards;
+  }
+
+  @keyframes move {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+
+    25% {
+      transform: translate3d(0, -10px, 0);
+    }
+
+    50% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    75% {
+      transform: translate3d(0, 10px, 0);
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .bird2 {
+    position: absolute;
+    background: no-repeat url(./images/player.png);
+    background-size: 100% 100%;
+    width: 143px;
+    height: 132px;
+    left: 180px;
+    bottom: 50px;
+    animation: move 2s linear forwards infinite;
+  }
+  .words {
+    font-family: PingFangSC-Light;
+    width: 212px;
+    height: 135px;
+    position: absolute;
+    right: 24px;
+    top: 30px;
+    text-align: right;
+    font-size: 15px;
+
+    .red {
+      color: #f12d2d;
+    }
+    p {
+      margin: 4px 0;
+      animation-duration: 1.5s;
+
+      &:nth-child(1) {
+        animation-delay: 2.2s;
+      }
+      &:nth-child(2) {
+        animation-delay: 3.7s;
+      }
+      &:nth-child(3) {
+        animation-delay: 5.2s;
+      }
+      &:nth-child(4) {
+        animation-delay: 6.7s;
+      }
+      &:nth-child(5) {
+        animation-delay: 8.2s;
+      }
+      &:nth-child(6) {
+        animation-delay: 9.5s;
+      }
+    }
+  }
+}
