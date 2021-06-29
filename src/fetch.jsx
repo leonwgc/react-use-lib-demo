@@ -1,20 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { utils } from 'react-use-lib';
-
-const { fetch } = utils;
+import { get } from 'xhr-fetch-lib';
 
 const App = () => {
   const [res, setRes] = useState(null);
   useEffect(() => {
-    fetch({
-      url: 'https://account.cnblogs.com/user/userinfo',
-      responseParser: (xhr) => xhr,
-    }).then((res) => {
-      console.log(res);
+    get('https://account.cnblogs.com/user/userinfo').then((res) => {
       setRes(res);
     });
   }, []);
-  return <div dangerouslySetInnerHTML={{ __html: res?.response }}></div>;
+  return <div dangerouslySetInnerHTML={{ __html: res }}></div>;
 };
 
 export default App;
