@@ -38,7 +38,7 @@ const App = () => {
           </div>
         );
       })}
-      <Button type="primary" onClick={() => add('')}>
+      <Button type="primary" onClick={() => add({})}>
         Add
       </Button>
       {JSON.stringify(list)}
