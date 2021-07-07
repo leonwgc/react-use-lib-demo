@@ -64,6 +64,7 @@
     ]
   },
   "dependencies": {
-    "react-use-lib": "^0.1.2"
+    "react-use-lib": "^0.1.2",
+    "xhr-fetch-lib": "~1.0.1"
   }
 }
