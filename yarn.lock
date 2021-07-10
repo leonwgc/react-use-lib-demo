@@ -7585,9 +7585,10 @@ ws@^7.3.1:
   version "7.4.6"
   resolved "https://registry.nlark.com/ws/download/ws-7.4.6.tgz#5654ca8ecdeee47c33a9a4bf6d28e2be2980377c"
 
-xhr-fetch-lib@~1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/xhr-fetch-lib/-/xhr-fetch-lib-1.0.1.tgz#e35749f2f34f259a64b2b6d4098700f3c0694d2e"
+xhr-fetch-lib@~1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/xhr-fetch-lib/-/xhr-fetch-lib-1.2.1.tgz#1690f690e713ecb7cadb39984b7ed78c526b50ba"
+  integrity sha512-FauxpsGjqW47Pkr4p69bkc23hKEUF+VyLQzW0AMJehEtf46lN/E/+5tll4eG0rBXlFuy+n4RLKMXoilUAS3mcg==
   dependencies:
     json-bigint "^1.0.0"
     qs "^6.10.1"
