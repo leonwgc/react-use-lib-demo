@@ -6,7 +6,7 @@ import Styled from 'styled-components';
 import { useList } from 'react-use-lib';
 
 const StyledEl = Styled.div`
-   transition: all 200ms ease-in-out;
+   transition: all ${(props) => props.duration}ms ease-in-out;
    &.entered{
      opacity:1;
    }
@@ -16,6 +16,7 @@ const StyledEl = Styled.div`
    }
 `;
 
+const timeout = 200;
 const App = () => {
   const { list, add, remove, keys, set, moveUp, moveDown } = useList([{ name: 'wgc', age: 18 }]);
 
@@ -24,9 +25,9 @@ const App = () => {
       <TransitionGroup>
         {list.map((item, idx) => {
           return (
-            <Transition key={keys[idx]} timeout={200}>
+            <Transition key={keys[idx]} timeout={timeout}>
               {(state) => (
-                <StyledEl className={state}>
+                <StyledEl className={state} duration={timeout}>
                   <Space align="start">
                     <Form.Item label="name">
                       <Input
