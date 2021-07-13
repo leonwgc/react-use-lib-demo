@@ -9,10 +9,12 @@ const StyledEl = Styled.div`
    transition: all ${(props) => props.duration}ms ease-in-out;
    &.entered{
      opacity:1;
+     transform:translate(0,0);
    }
 
    &.exiting,&.exited,&.entering{
      opacity:0;
+     transform:translate(-100%,0);
    }
 `;
 
