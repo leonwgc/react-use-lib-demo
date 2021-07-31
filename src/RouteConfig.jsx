@@ -42,8 +42,8 @@ const routes = [
     component: lazy(() => import('./useList')),
   },
   {
-    path: '/fetch',
-    component: lazy(() => import('./fetch')),
+    path: '/useList1',
+    component: lazy(() => import('./useListTE')),
   },
   {
     path: '/debounce-throttle',

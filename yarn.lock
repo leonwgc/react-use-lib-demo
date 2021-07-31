@@ -6246,6 +6246,11 @@ react-is@^16.12.0, react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-
   version "16.13.1"
   resolved "https://registry.nlark.com/react-is/download/react-is-16.13.1.tgz?cache=0&sync_timestamp=1623168271495&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-is%2Fdownload%2Freact-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
 
+react-is@^17.0.2:
+  version "17.0.2"
+  resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
+  integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+
 react-redux@^7.2.0:
   version "7.2.4"
   resolved "https://registry.nlark.com/react-redux/download/react-redux-7.2.4.tgz#1ebb474032b72d806de2e0519cd07761e222e225"
@@ -6298,9 +6303,34 @@ react-transition-group@^4.4.2:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-uni-comps@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/react-uni-comps/-/react-uni-comps-0.1.4.tgz#93d1383e59f3f49ecbddbbfb924889b186b041ab"
+  integrity sha512-9rYRwv5vMRzaTl2i1Z5Sj4fJwP/kLflkhwBHTP2Q5ZV5PIOs/tydizaVPlZHRYd6kwnamrDds8PIKPMe8MdpqQ==
+  dependencies:
+    nanoid "^3.1.23"
+    react-is "^17.0.2"
+    react-transition-group "^4.4.2"
+    react-use-lib "~1.0.1"
+    styled-components "^5.3.0"
+
 react-use-lib@^0.1.2:
   version "0.1.2"
   resolved "https://registry.npmjs.org/react-use-lib/-/react-use-lib-0.1.2.tgz#26ca20a94196a6aca2f0b9900fff57d220b12ead"
+  dependencies:
+    animate.css "^4.1.1"
+    intersection-observer "^0.12.0"
+    js-cookie "^2.2.1"
+    json-bigint "^1.0.0"
+    nanoid "^3.1.23"
+    qs "^6.10.1"
+    signature_pad "^3.0.0-beta.4"
+    sortablejs "^1.13.0"
+
+react-use-lib@~1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/react-use-lib/-/react-use-lib-1.0.1.tgz#8654fbd61188ea0d6f4d9ec1cab7f604d66bdd00"
+  integrity sha512-h+1bZl+qw6ecjOhKGzhyLt+JfeXVLVaDO56ggnF9j/HjlJJ3w4eSXGhgwNj+Y7BW1DoQ6qmQy1enhIfRepo6xA==
   dependencies:
     animate.css "^4.1.1"
     intersection-observer "^0.12.0"
