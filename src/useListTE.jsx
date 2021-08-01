@@ -18,7 +18,7 @@ const StyledEl = Styled.div`
    }
 `;
 
-const timeout = 200;
+const timeout = 100;
 const App = () => {
   const { list, add, remove, keys, set, moveUp, moveDown } = useList([{ name: 'wgc', age: 18 }]);
 
@@ -26,7 +26,7 @@ const App = () => {
     <div>
       {list.map((item, idx) => {
         return (
-          <TransitionElement key={keys[idx]} duration={timeout} once={false}>
+          <TransitionElement key={keys[idx]} duration={timeout}>
             <StyledEl>
               <Space align="start">
                 <Form.Item label="name">
