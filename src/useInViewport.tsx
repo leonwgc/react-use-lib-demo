@@ -1,11 +1,19 @@
 import { RefObject, useEffect, useState } from 'react';
 import 'intersection-observer';
 
-function useInViewport(ref: RefObject<HTMLElement>, options?: IntersectionObserverInit): boolean {
+function useInViewport(
+  ref: RefObject<HTMLElement>,
+  rootRef = null,
+  options?: IntersectionObserverInit
+): boolean {
   const [inViewPort, setInViewport] = useState<boolean>();
 
   useEffect(() => {
     if (ref.current) {
+      const opt = { ...options };
+      if (rootRef) {
+        opt.root = rootRef.current;
+      }
       const observer = new IntersectionObserver((entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
@@ -14,7 +22,7 @@ function useInViewport(ref: RefObject<HTMLElement>, options?: IntersectionObserv
             setInViewport(false);
           }
         }
-      }, options);
+      }, opt);
 
       observer.observe(ref.current);
 

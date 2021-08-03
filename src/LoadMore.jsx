@@ -4,13 +4,14 @@ import { Spin } from 'antd';
 import './LoadMore.less';
 
 // 实现移动端上拉加载
-const pageSize = 20;
+const pageSize = 5;
 
 const LoadMore = () => {
   const [isLoading, setLoading] = useState(false);
   const ref = useRef();
+  const wrapRef = useRef();
   const [data, setData] = useState([]);
-  const isBottomReached = useInViewport(ref, {});
+  const isBottomReached = useInViewport(ref);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
@@ -34,7 +35,7 @@ const LoadMore = () => {
         }
         setTimeout(() => {
           setData((d) => d.concat(ar));
-          setHasMore(page < 4);
+          setHasMore(page < 10);
           resolve();
         }, 1000);
       }).then(() => {
@@ -45,7 +46,7 @@ const LoadMore = () => {
   }, [page]);
 
   return (
-    <div className="pull-wrapper">
+    <div className="pull-wrapper" ref={wrapRef}>
       <div className="pull-content">
         {data.map((item, idx) => (
           <div key={idx} className="item" data-item={item}>
