@@ -26,10 +26,6 @@ const routes = [
     component: lazy(() => import('./useEffect')),
   },
   {
-    path: '/useCookie',
-    component: lazy(() => import('./useCookie')),
-  },
-  {
     path: '/useSigPad',
     component: lazy(() => import('./useSigPad')),
   },
@@ -44,10 +40,6 @@ const routes = [
   {
     path: '/useList1',
     component: lazy(() => import('./useListTE')),
-  },
-  {
-    path: '/debounce-throttle',
-    component: lazy(() => import('./DebounceThrottle')),
   },
 ];
 

@@ -3,6 +3,8 @@ import { useInViewport, useUpdateEffect } from 'react-use-lib';
 import { Spin } from 'antd';
 import './useInViewport.less';
 
+const isTouchDevice = typeof window !== 'undefined' && window.ontouchstart !== undefined;
+
 // 实现移动端上拉加载
 const pageSize = 10;
 
@@ -13,6 +15,19 @@ export default function useInViewportApp() {
   const isBottomReached = useInViewport(ref);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(false);
+
+  useEffect(() => {
+    const touchHandler = () => {
+      if (!isLoading && isBottomReached && hasMore) {
+        setPage((p) => p + 1);
+      }
+    };
+    document.addEventListener(isTouchDevice ? 'touchstart' : 'click', touchHandler, true);
+
+    return () => {
+      document.removeEventListener(isTouchDevice ? 'touchstart' : 'click', touchHandler, true);
+    };
+  }, []);
 
   useUpdateEffect(() => {
     if (isBottomReached && hasMore) {
