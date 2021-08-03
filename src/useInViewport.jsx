@@ -3,12 +3,10 @@ import useInViewport from 'react-use-lib/es/useInViewport';
 import { Spin } from 'antd';
 import './useInViewport.less';
 
-const isTouchDevice = typeof window !== 'undefined' && window.ontouchstart !== undefined;
-
 // 实现移动端上拉加载
-const pageSize = 10;
+const pageSize = 20;
 
-export default function useInViewportApp() {
+const LoadMore = () => {
   const [isLoading, setLoading] = useState(false);
   const ref = useRef();
   const [data, setData] = useState([]);
@@ -23,19 +21,10 @@ export default function useInViewportApp() {
   }, [isLoading, isBottomReached, hasMore]);
 
   useEffect(() => {
-    document.addEventListener(isTouchDevice ? 'touchstart' : 'click', setPageHandler, true);
-
-    return () => {
-      document.removeEventListener(isTouchDevice ? 'touchstart' : 'click', setPageHandler, true);
-    };
-  }, [setPageHandler]);
-
-  useEffect(() => {
     setPageHandler();
   }, [setPageHandler]);
 
   useEffect(() => {
-    console.log(page);
     const fetchData = () => {
       setLoading(true);
       return new Promise((resolve) => {
@@ -69,4 +58,6 @@ export default function useInViewportApp() {
       </div>
     </div>
   );
-}
+};
+
+export default LoadMore;
