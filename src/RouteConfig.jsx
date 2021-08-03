@@ -11,7 +11,7 @@ const routes = [
   },
   {
     path: '/useInViewport',
-    component: lazy(() => import('./useInViewport')),
+    component: lazy(() => import('./LoadMore')),
   },
   {
     path: '/usePrevious',

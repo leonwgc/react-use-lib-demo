@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import useInViewport from 'react-use-lib/es/useInViewport';
+import useInViewport from './useInViewport';
 import { Spin } from 'antd';
-import './useInViewport.less';
+import './LoadMore.less';
 
 // 实现移动端上拉加载
 const pageSize = 20;
@@ -10,7 +10,7 @@ const LoadMore = () => {
   const [isLoading, setLoading] = useState(false);
   const ref = useRef();
   const [data, setData] = useState([]);
-  const isBottomReached = useInViewport(ref);
+  const isBottomReached = useInViewport(ref, {});
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
