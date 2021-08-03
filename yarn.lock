@@ -6303,21 +6303,21 @@ react-transition-group@^4.4.2:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react-uni-comps@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.npmjs.org/react-uni-comps/-/react-uni-comps-0.1.4.tgz#93d1383e59f3f49ecbddbbfb924889b186b041ab"
-  integrity sha512-9rYRwv5vMRzaTl2i1Z5Sj4fJwP/kLflkhwBHTP2Q5ZV5PIOs/tydizaVPlZHRYd6kwnamrDds8PIKPMe8MdpqQ==
+react-uni-comps@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.npmjs.org/react-uni-comps/-/react-uni-comps-0.1.9.tgz#67a9ac25997af8be840fbbd2793a426046a5e4f5"
+  integrity sha512-E4UqmvK1UZH5ynqGh5JlIvdfug2tY4n72k+o3CiWV6HS783rz+zFjWSzX6EfHswK5Sa2pdi8TUBpmeckL7r7qA==
   dependencies:
     nanoid "^3.1.23"
     react-is "^17.0.2"
     react-transition-group "^4.4.2"
-    react-use-lib "~1.0.1"
+    react-use-lib "~1.0.5"
     styled-components "^5.3.0"
 
-react-use-lib@~1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/react-use-lib/-/react-use-lib-1.0.1.tgz#8654fbd61188ea0d6f4d9ec1cab7f604d66bdd00"
-  integrity sha512-h+1bZl+qw6ecjOhKGzhyLt+JfeXVLVaDO56ggnF9j/HjlJJ3w4eSXGhgwNj+Y7BW1DoQ6qmQy1enhIfRepo6xA==
+react-use-lib@~1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/react-use-lib/-/react-use-lib-1.0.4.tgz#316b72aabf61558f6e72441b1f106e3519c04c4b"
+  integrity sha512-i6KZXlQlSu9QqlOBmqEa/9n97jST3FRVHPEvvERXBrQO/8hjhRfmBjpNiZKik7j0ktaeuVC7kmI4k1eC2coVoQ==
   dependencies:
     animate.css "^4.1.1"
     intersection-observer "^0.12.0"
@@ -6328,10 +6328,10 @@ react-use-lib@~1.0.1:
     signature_pad "^3.0.0-beta.4"
     sortablejs "^1.13.0"
 
-react-use-lib@~1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/react-use-lib/-/react-use-lib-1.0.2.tgz#c7c581dce5856c467f96adf9e6659c99f66fc2f6"
-  integrity sha512-NnUSzO5ipP+y3ffhwDLzhpu042PX15YqPN4v3jAIgqKTc1g0ZVKOfV1LMopJX+mkWXEvgtsraJH0MSczyY02qg==
+react-use-lib@~1.0.5:
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/react-use-lib/-/react-use-lib-1.0.5.tgz#d65271d3d1f5bf1abb9ba059c32983ddfb32c418"
+  integrity sha512-ez5vw6g5Y8ooTekNS1vQCJkVoaRJEHuF/sshgIXtfUkRDUFb5bM78pzHq0SiybzX//qJqyRexXIM2o/cm2pFmA==
   dependencies:
     animate.css "^4.1.1"
     intersection-observer "^0.12.0"

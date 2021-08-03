@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useInViewport, useUpdateEffect } from 'react-use-lib';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import useInViewport from 'react-use-lib/es/useInViewport';
 import { Spin } from 'antd';
 import './useInViewport.less';
 
@@ -14,28 +14,28 @@ export default function useInViewportApp() {
   const [data, setData] = useState([]);
   const isBottomReached = useInViewport(ref);
   const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(false);
+  const [hasMore, setHasMore] = useState(true);
 
-  useEffect(() => {
-    const touchHandler = () => {
-      if (!isLoading && isBottomReached && hasMore) {
-        setPage((p) => p + 1);
-      }
-    };
-    document.addEventListener(isTouchDevice ? 'touchstart' : 'click', touchHandler, true);
-
-    return () => {
-      document.removeEventListener(isTouchDevice ? 'touchstart' : 'click', touchHandler, true);
-    };
-  }, []);
-
-  useUpdateEffect(() => {
-    if (isBottomReached && hasMore) {
+  const setPageHandler = useCallback(() => {
+    if (!isLoading && isBottomReached && hasMore) {
       setPage((p) => p + 1);
     }
-  }, [isBottomReached, hasMore]);
+  }, [isLoading, isBottomReached, hasMore]);
 
   useEffect(() => {
+    document.addEventListener(isTouchDevice ? 'touchstart' : 'click', setPageHandler, true);
+
+    return () => {
+      document.removeEventListener(isTouchDevice ? 'touchstart' : 'click', setPageHandler, true);
+    };
+  }, [setPageHandler]);
+
+  useEffect(() => {
+    setPageHandler();
+  }, [setPageHandler]);
+
+  useEffect(() => {
+    console.log(page);
     const fetchData = () => {
       setLoading(true);
       return new Promise((resolve) => {
