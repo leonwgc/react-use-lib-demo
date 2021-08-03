@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import useInViewport from './useInViewport';
+import useInViewport from 'react-use-lib/es/useInViewport';
 import { Spin } from 'antd';
 import './LoadMore.less';
 

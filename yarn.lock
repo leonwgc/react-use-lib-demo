@@ -6314,10 +6314,10 @@ react-uni-comps@^0.1.9:
     react-use-lib "~1.0.5"
     styled-components "^5.3.0"
 
-react-use-lib@~1.0.4:
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/react-use-lib/-/react-use-lib-1.0.4.tgz#316b72aabf61558f6e72441b1f106e3519c04c4b"
-  integrity sha512-i6KZXlQlSu9QqlOBmqEa/9n97jST3FRVHPEvvERXBrQO/8hjhRfmBjpNiZKik7j0ktaeuVC7kmI4k1eC2coVoQ==
+react-use-lib@~1.0.5:
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/react-use-lib/-/react-use-lib-1.0.5.tgz#d65271d3d1f5bf1abb9ba059c32983ddfb32c418"
+  integrity sha512-ez5vw6g5Y8ooTekNS1vQCJkVoaRJEHuF/sshgIXtfUkRDUFb5bM78pzHq0SiybzX//qJqyRexXIM2o/cm2pFmA==
   dependencies:
     animate.css "^4.1.1"
     intersection-observer "^0.12.0"
@@ -6328,10 +6328,10 @@ react-use-lib@~1.0.4:
     signature_pad "^3.0.0-beta.4"
     sortablejs "^1.13.0"
 
-react-use-lib@~1.0.5:
-  version "1.0.5"
-  resolved "https://registry.npmjs.org/react-use-lib/-/react-use-lib-1.0.5.tgz#d65271d3d1f5bf1abb9ba059c32983ddfb32c418"
-  integrity sha512-ez5vw6g5Y8ooTekNS1vQCJkVoaRJEHuF/sshgIXtfUkRDUFb5bM78pzHq0SiybzX//qJqyRexXIM2o/cm2pFmA==
+react-use-lib@~1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/react-use-lib/-/react-use-lib-1.1.0.tgz#b278e6209a830ed8e6b91980c7f9985aab30d703"
+  integrity sha512-exCpHUzfg1GYsrA4TOBYZzA10qCauDZ5mz2QICMvaJuEAiwnNG+NGY1B5JBszJSeBjvlHWu2w6THjrFBBGOTyg==
   dependencies:
     animate.css "^4.1.1"
     intersection-observer "^0.12.0"
