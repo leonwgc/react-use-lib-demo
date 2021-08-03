@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import useInViewport from 'react-use-lib/es/useInViewport';
+import { useInViewport } from 'react-use-lib';
 import { Spin } from 'antd';
 import './LoadMore.less';
 
@@ -11,7 +11,7 @@ const LoadMore = () => {
   const ref = useRef();
   const wrapRef = useRef();
   const [data, setData] = useState([]);
-  const isBottomReached = useInViewport(ref);
+  const isBottomReached = useInViewport(ref, wrapRef);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
